@@ -19,5 +19,8 @@ public class ActorPrinter {
 		for(Actor a : l){
 			logger.info(a.toString());
 		}
+		
+		
+		System.exit(0);
 	}
 }

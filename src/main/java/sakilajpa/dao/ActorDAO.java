@@ -23,12 +23,34 @@ public class ActorDAO {
 	}
 	
 	public List<Actor> list(){
-		EntityTransaction t = em.getTransaction(); 
-		t.begin();
 		TypedQuery<Actor> q = em.createNamedQuery("Actor.findAll", Actor.class);
 		List<Actor> l = q.getResultList();
-		t.commit();
 		return l;
+	}
+	
+	public void delete(int id){
+		EntityTransaction t = em.getTransaction(); 
+		t.begin();
+		Actor a = em.find(Actor.class, id);
+		em.remove(a);
+		t.commit();
+	}
+	
+	public void update(Actor a){
+		Actor a1 = em.find(Actor.class, a.getActorId());
+		a1.setFirstName(a.getFirstName());
+		a1.setLastName(a.getLastName());
+		EntityTransaction t = em.getTransaction(); 
+		t.begin();
+		em.persist(a1);
+		t.commit();
+	}
+
+	public void save(Actor a) {
+		EntityTransaction t = em.getTransaction(); 
+		t.begin();
+		em.persist(a);
+		t.commit();
 	}
 	
 }
