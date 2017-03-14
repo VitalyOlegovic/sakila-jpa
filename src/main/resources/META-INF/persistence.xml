@@ -1,0 +1,22 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+	<persistence-unit name="sakila">
+	
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+	
+		<class>sakilajpa.model.Actor</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.1.2:3306/sakila?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+			<property name="javax.persistence.jdbc.user" value="sakila"/>
+			<property name="javax.persistence.jdbc.password" value="sakila"/>
+			
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+		</properties>
+		
+	</persistence-unit>
+</persistence>
