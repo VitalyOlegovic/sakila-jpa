@@ -19,3 +19,5 @@ hs_err_pid*
 log.out
 
 
+/.idea/
+/sakila-jpa.iml
