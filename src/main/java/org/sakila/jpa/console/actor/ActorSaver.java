@@ -1,9 +1,9 @@
-package sakilajpa.console.actor;
+package org.sakila.jpa.console.actor;
 
 import java.util.Scanner;
 
-import sakilajpa.dao.ActorDAO;
-import sakilajpa.model.Actor;
+import org.sakila.jpa.dao.ActorDAO;
+import org.sakila.jpa.model.Actor;
 
 public class ActorSaver {
 	public static void main(String[] args) {

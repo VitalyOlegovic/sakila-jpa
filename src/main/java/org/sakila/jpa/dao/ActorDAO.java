@@ -1,4 +1,4 @@
-package sakilajpa.dao;
+package org.sakila.jpa.dao;
 
 import java.util.List;
 
@@ -6,11 +6,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
+import org.sakila.jpa.model.Actor;
+import org.sakila.jpa.util.JPAUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import sakilajpa.model.Actor;
-import sakilajpa.util.JPAUtil;
 
 public class ActorDAO {
 

@@ -1,12 +1,11 @@
-package sakilajpa.console.actor;
+package org.sakila.jpa.console.actor;
 
 import java.util.List;
 
+import org.sakila.jpa.dao.ActorDAO;
+import org.sakila.jpa.model.Actor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import sakilajpa.dao.ActorDAO;
-import sakilajpa.model.Actor;
 
 public class ActorPrinter {
 	

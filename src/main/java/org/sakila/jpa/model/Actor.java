@@ -1,4 +1,4 @@
-package sakilajpa.model;
+package org.sakila.jpa.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
